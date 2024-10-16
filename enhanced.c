@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
 
 
 
-   while ((packet = pcap_next(handle, &header)) != NULL & packet_count < 50){
+   while ((packet = pcap_next(handle, &header)) != NULL){
       
        //checking whether the amount of packet length is enough for ip + ethernet header(always 14)
        if(header.len < sizeof(struct iphdr) + 14){
